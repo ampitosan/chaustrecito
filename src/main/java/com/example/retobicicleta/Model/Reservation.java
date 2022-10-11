@@ -47,12 +47,12 @@ public class Reservation implements Serializable {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public Date getDevolutionDate() {
         return devolutionDate;
     }
 
-    public void setEndDate(Date endDate) {
-        this.devolutionDate = endDate;
+    public void setDevolutionDate(Date devolutionDate) {
+        this.devolutionDate = devolutionDate;
     }
 
     public String getStatus() {
