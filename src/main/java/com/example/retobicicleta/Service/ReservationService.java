@@ -44,8 +44,8 @@ public class ReservationService {
                 if (reservation.getStartDate() != null) {
                     reservatioencontrada.get().setStartDate((reservation.getStartDate()));
                 }
-                if (reservation.getEndDate() != null) {
-                    reservatioencontrada.get().setEndDate(reservation.getEndDate());
+                if (reservation.getDevolutionDate() != null) {
+                    reservatioencontrada.get().setDevolutionDate(reservation.getDevolutionDate());
 
                 }
                 if (reservation.getStatus() != null) {
