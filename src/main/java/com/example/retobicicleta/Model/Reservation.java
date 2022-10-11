@@ -14,7 +14,7 @@ public class Reservation implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idReservation;
     private Date startDate;
-    private Date endDate;
+    private Date devolutionDate;
     private String status="created";
 
     @ManyToOne
@@ -48,11 +48,11 @@ public class Reservation implements Serializable {
     }
 
     public Date getEndDate() {
-        return endDate;
+        return devolutionDate;
     }
 
     public void setEndDate(Date endDate) {
-        this.endDate = endDate;
+        this.devolutionDate = endDate;
     }
 
     public String getStatus() {
