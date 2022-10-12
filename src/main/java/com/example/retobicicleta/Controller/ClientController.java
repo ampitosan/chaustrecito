@@ -1,5 +1,6 @@
 package com.example.retobicicleta.Controller;
 
+import com.example.retobicicleta.Model.Category;
 import com.example.retobicicleta.Model.Client;
 import com.example.retobicicleta.Service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,4 +31,12 @@ public class ClientController {
     public Client save(@RequestBody Client c){
         return clientService.save(c);
     }
+
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Client update(@RequestBody Client client){return clientService.update(client);}
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable("id") int id){return clientService.delete(id);}
 }

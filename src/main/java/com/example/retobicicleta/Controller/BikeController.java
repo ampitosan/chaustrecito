@@ -1,5 +1,6 @@
 package com.example.retobicicleta.Controller;
 
+import com.example.retobicicleta.Model.Admin;
 import com.example.retobicicleta.Model.Bike;
 import com.example.retobicicleta.Service.BikeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,13 @@ public class BikeController {
     public Bike save (@RequestBody Bike bike){
         return bikeService.save(bike);
     }
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Bike update(@RequestBody Bike bike){return bikeService.update(bike);}
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable("id") int id){return bikeService.deleteBike(id);}
 
 }
 

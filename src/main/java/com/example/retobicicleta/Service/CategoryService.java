@@ -1,6 +1,7 @@
 package com.example.retobicicleta.Service;
 
 import com.example.retobicicleta.Model.Admin;
+import com.example.retobicicleta.Model.Bike;
 import com.example.retobicicleta.Model.Category;
 import com.example.retobicicleta.Repository.AdminRepository;
 import com.example.retobicicleta.Repository.CategoryRepository;
@@ -60,5 +61,7 @@ public class CategoryService {
         }).orElse(false);
         return resultado;
     }
+    public Optional<Category> getCategoryId(int id){
+        return categoryRepository.getCategory(id);}
 
 }

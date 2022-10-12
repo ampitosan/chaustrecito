@@ -1,6 +1,7 @@
 package com.example.retobicicleta.Service;
 
 
+import com.example.retobicicleta.Model.Message;
 import com.example.retobicicleta.Model.Reservation;
 import com.example.retobicicleta.Model.Score;
 import com.example.retobicicleta.Repository.ReservationRepository;
@@ -61,4 +62,6 @@ public class ScoreService {
         }).orElse(false);
         return resultado;
     }
+    public Optional<Score> getScoreId(int id){
+        return scoreRepository.getScore(id);}
 }

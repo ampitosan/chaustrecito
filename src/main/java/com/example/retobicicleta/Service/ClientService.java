@@ -1,5 +1,6 @@
 package com.example.retobicicleta.Service;
 
+import com.example.retobicicleta.Model.Category;
 import com.example.retobicicleta.Model.Client;
 import com.example.retobicicleta.Repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,5 +59,7 @@ public class ClientService {
             }).orElse(false);
                return resultado;
         }
+    public Optional<Client> getClientId(int id){
+        return clientRepository.getClient(id);}
 
 }

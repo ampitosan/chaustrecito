@@ -1,6 +1,7 @@
 package com.example.retobicicleta.Service;
 
 
+import com.example.retobicicleta.Model.Category;
 import com.example.retobicicleta.Model.Message;
 import com.example.retobicicleta.Repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,7 @@ public class MessageService {
             } else {
                 return message;
             }
+
         }
     }
 
@@ -58,4 +60,6 @@ public class MessageService {
         }).orElse(false);
         return resultado;
     }
+    public Optional<Message> getMessageId(int id){
+        return messageRepository.getMessage(id);}
 }

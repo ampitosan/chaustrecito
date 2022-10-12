@@ -58,5 +58,9 @@ public class AdminService {
         }).orElse(false);
         return resultado;
     }
+    public Optional<Admin> getAdminId(int id){
+        return adminRepository.getAdmin(id);
+
+    }
 
 }

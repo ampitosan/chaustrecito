@@ -1,5 +1,6 @@
 package com.example.retobicicleta.Controller;
 
+import com.example.retobicicleta.Model.Message;
 import com.example.retobicicleta.Model.Reservation;
 import com.example.retobicicleta.Service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,15 @@ public class ReservationController {
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Reservation save(@RequestBody Reservation p){return reservationService.save(p);}
+    @PutMapping("/update")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Reservation update(@RequestBody Reservation reservation){return reservationService.update(reservation);}
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean delete(@PathVariable("id") int id){return reservationService.deleteReservation(id);}
+
+
 
 
 

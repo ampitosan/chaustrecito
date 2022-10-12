@@ -1,6 +1,7 @@
 package com.example.retobicicleta.Service;
 
 import com.example.retobicicleta.Model.Admin;
+import com.example.retobicicleta.Model.Message;
 import com.example.retobicicleta.Model.Reservation;
 import com.example.retobicicleta.Repository.AdminRepository;
 import com.example.retobicicleta.Repository.ReservationRepository;
@@ -65,5 +66,6 @@ public class ReservationService {
         }).orElse(false);
         return resultado;
     }
-
+    public Optional<Reservation> getReservationId(int id){
+        return reservationRepository.getReservation(id);}
 }

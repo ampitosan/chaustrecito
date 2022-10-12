@@ -1,5 +1,6 @@
 package com.example.retobicicleta.Service;
 
+import com.example.retobicicleta.Model.Admin;
 import com.example.retobicicleta.Model.Bike;
 import com.example.retobicicleta.Repository.BikeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,4 +69,6 @@ public class BikeService {
         }).orElse(false);
         return resultado;
     }
+    public Optional<Bike> getBikeId(int id){
+        return bikeRepository.getBike(id);}
 }
