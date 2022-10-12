@@ -37,7 +37,7 @@ public class ClientService {
     public Client update(Client client){
         if(client.getIdClient()!=null) {
             Optional<Client> clienteEncontrado = getClient(client.getIdClient());
-            if (clienteEncontrado.isEmpty()) {
+            if (!clienteEncontrado.isEmpty()) {
                 if (client.getName() != null) {
                     clienteEncontrado.get().setName(client.getName());
                 }
